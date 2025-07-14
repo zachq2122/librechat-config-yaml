@@ -2129,3 +2129,25 @@ endpoints:
       summaryModel: "grok-beta"
       forcePrompt: false
       modelDisplayLabel: "Grok"
+
+      # ...all your other config above...
+
+mcpServers:
+  my-filesystem:
+    type: sse
+    url: "http://my-filesystem-mcp:8002/sse"
+    serverInstructions: true
+  Hubspot:
+    command: npx
+    args:
+      - -y
+      - "@hubspot/mcp-server"
+    env:
+      PRIVATE_APP_ACCESS_TOKEN: "${HUBSPOT_KEY}"
+  Gmail:
+    command: npx
+    args:
+      - -y
+      - supergateway
+      - --sse
+      - "${GMAIL_PIPEDREAM_LINK}"
