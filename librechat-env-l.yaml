@@ -2148,7 +2148,3 @@ mcpServers:
       - "@hubspot/mcp-server"
     env:
       PRIVATE_APP_ACCESS_TOKEN: "${HUBSPOT_KEY}"
-
-  gmail:
-    url: "${GMAIL_PIPEDREAM_LINK}"
-      type: sse
