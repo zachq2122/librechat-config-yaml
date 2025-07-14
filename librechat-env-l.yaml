@@ -2141,6 +2141,10 @@ endpoints:
       
 
 mcpServers:
+  Gmail:
+    tyep: streamble-http
+    url: "${GMAIL_PIPEDREAM_LINK}"
+    
   Hubspot:
     command: npx
     args:
