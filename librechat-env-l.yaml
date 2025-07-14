@@ -2148,6 +2148,7 @@ mcpServers:
       - "@hubspot/mcp-server"
     env:
       PRIVATE_APP_ACCESS_TOKEN: "${HUBSPOT_KEY}"
+
   Gmail:
     command: npx
     args:
