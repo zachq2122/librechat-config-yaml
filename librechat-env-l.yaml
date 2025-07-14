@@ -2131,12 +2131,16 @@ endpoints:
       modelDisplayLabel: "Grok"
 
       # ...all your other config above...
+  agents:
+    disableBuilder: false
+    capabilities:
+      - "tools"
+      - "execute_code"
+      - "file_search"
+      - "actions"
+      
 
 mcpServers:
-  my-filesystem:
-    type: sse
-    url: "http://my-filesystem-mcp:8002/sse"
-    serverInstructions: true
   Hubspot:
     command: npx
     args:
@@ -2151,3 +2155,5 @@ mcpServers:
       - supergateway
       - --sse
       - "${GMAIL_PIPEDREAM_LINK}"
+
+
